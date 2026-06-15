@@ -3,9 +3,26 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+
+
+    public GameObject PanelSetting;
+    public GameObject mainMenuPanel;
+
     public void MulaiGame()
     {
-        SceneManager.LoadScene("FPSGame"); // Pastikan ini nama scene asli kamu
+        SceneManager.LoadScene("FPSGame"); 
+    }
+
+    public void BukaSetting()
+    {
+        mainMenuPanel.SetActive(false);
+        PanelSetting.SetActive(true);
+    }
+
+    public void TutupSetting()
+    {
+        PanelSetting.SetActive(false);
+        mainMenuPanel.SetActive(true);
     }
 
     // --- TAMBAHKAN INI UNTUK TOMBOL EXIT ---
